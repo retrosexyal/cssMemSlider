@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    margin: 0 auto;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    background-color: rgb(64, 63, 63);
+}
+input{
+    visibility: hidden;
+    position: absolute;
+}
+.picture_section{
+    /* display: flex; */
+    position: relative;
+    /* top: -600px; */
+    transition: top cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+figure{
+    position: relative;
+    height: 500px;
+    margin-bottom: 100px;
+}
+img{
+    position: absolute;
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+figcaption{
+    position: absolute;
+    bottom: -100px;
+}
+#first_input:checked ~ .picture_section{
+    top: 0px;
+}
+#second_input:checked ~ .picture_section{
+    top: -600px;
+}
+#third_input:checked ~ .picture_section{
+    top: -1200px;
+}
+#forth_input:checked ~ .picture_section{
+    top: -1800px;
+}
+
+label{
+    width: 100px;
+    height: 100px;
+    border-radius: 25px;
+    padding: 50px;
+    position:absolute;
+    z-index: 1;
+    top: 500px;
+    left: 55%;
+}
+.second_label{
+    margin-left: 120px;
+}
+.third_label{
+    margin-left: 240px;
+}
+.forth_label{
+    margin-left: 360px;
+}
+label>div{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: red;
+}
+label:hover{
+    cursor: pointer;
+}
+#first_input:checked ~ .first_label > div{
+    background-color: blue;
+}
+#second_input:checked ~ .second_label > div{
+    background-color: blue;
+}
+#third_input:checked ~ .third_label > div{
+    background-color: blue;
+}
+#forth_input:checked ~ .forth_label > div{
+    background-color: blue;
+}
