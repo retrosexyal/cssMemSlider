@@ -70,8 +70,7 @@ label>div{
     margin-left: 0;
     position: absolute;
     left: 30px;
-    top: 25px;
-    
+    top: 25px;  
 }
 label:hover{
     cursor: pointer;
@@ -122,3 +121,36 @@ p{
     opacity: 1;
 }
 
+@media (max-width: 1082px) {
+
+    label{
+        top: 320px;
+        left: 34%;
+        padding: 30px;
+    }
+    label>div{
+        left: 20px;
+        top: 20px;  
+    }
+    figure{
+        height: 300px;
+        margin-bottom: 200px;
+    }
+    main{
+        height: 500px;
+    }
+    p{
+        top: 420px;
+        left: 35%;
+        font-size: 20pt;
+    }
+    #second_input:checked ~ .picture_section{
+        top: -500px;
+    }
+    #third_input:checked ~ .picture_section{
+        top: -1000px;
+    }
+    #forth_input:checked ~ .picture_section{
+        top: -1500px;
+    }
+}
