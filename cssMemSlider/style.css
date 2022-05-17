@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+}
+section{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 50vw;
+}
+input{
+    display: none;
+}
+p{  
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    flex: 0 1 60%;
+    text-align: left;
+    height: 30px;
+    margin: 20px auto;
+    margin-left: 0;
+    font-size: 20px;
+    align-self: center;
+    
+}
+label{
+    width: 40px;
+    height: 40px; 
+    flex: 0 1 5%;
+    align-self: center;
+}
+.first_label{
+    margin-left: auto;
+}
+.forth_label{
+    margin-right: 0;
+}
+label:hover{
+    cursor: pointer;
+    opacity: .5;
+}
+label:hover div{
+    cursor: pointer;
+    background-color: rgb(197, 53, 0);
+}
+div{
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: black;
+    margin: 5px;
+}
+figure{
+    width: 50vw;
+    height: 90vh;
+    display: none;
+    visibility: visible;
+    opacity: 0;
+    transition: opacity .5s;
+    flex: 0 1 100%;
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+#first_input:checked ~ .first_picture{
+    display: block;
+    animation: show 1s 1 forwards;
+}
+#second_input:checked ~ .second_picture{
+    display: block;
+    animation: show 1s 1 forwards;
+}
+#third_input:checked ~ .third_picture{
+    display: block;
+    animation: show 1s 1 forwards;
+}
+#forth_input:checked ~ .forth_picture{
+    display: block;
+    animation: show 1s 1 forwards;
+}
+
+#first_input:checked ~ .first_label > div{
+    border: solid 4px rgb(93, 33, 161);
+    background-color: aquamarine;
+}
+#second_input:checked ~ .second_label > div{
+    border: solid 4px rgb(93, 33, 161);
+    background-color: aquamarine;
+}
+#third_input:checked ~ .third_label > div{
+    border: solid 4px rgb(93, 33, 161);
+    background-color: aquamarine;
+}
+#forth_input:checked ~ .forth_label > div{
+    border: solid 4px rgb(93, 33, 161);
+    background-color: aquamarine;
+}
+#first_input:checked ~ .first_p{
+    display: block;
+    animation: show 1s 1 forwards;
+}
+#second_input:checked ~ .second_p{
+    display: block;
+    animation: show 1s 1 forwards;
+}
+#third_input:checked ~ .third_p{
+    display: block;
+    animation: show 1s 1 forwards;
+}
+#forth_input:checked ~ .forth_p{
+    display: block;
+    animation: show 1s 1 forwards;
+}
+@keyframes show {
+    0% {visibility: visible;
+        opacity: .1;}
+    100% {opacity: 1;
+        visibility: visible;}
+}
+
+@media (max-width: 720px) {
+    figure{
+        width: 30vw;
+        height: 50vh;
+    }
+    p{
+        order: 7;
+        flex: 0 1 100%;
+        text-align: left;
+        margin-left: 10%;
+    }
+    label{
+        flex: 0 1 5%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .first_label{
+        margin-left: auto;
+    }
+    .forth_label{
+        margin-right: auto;
+    }
+    section{
+        max-width: 90vw;
+    }
+}
